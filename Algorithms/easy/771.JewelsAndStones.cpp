@@ -1,8 +1,4 @@
 /**
- * Runtime: 4 ms, faster than 64.83% of C++ online submissions for Jewels and
- * Stones. Memory Usage: 8.1 MB, less than 98.75% of C++ online submissions for
- * Jewels and Stones.
- *
  * You're given strings J representing the types of stones that are jewels, and
  * S representing the stones you have. Each character in S is a type of stone
  * you have.
@@ -29,6 +25,11 @@
 #include <string>
 using namespace std;
 
+/**
+ * Runtime: 4 ms, faster than 64.83% of C++ online submissions for Jewels and
+ * Stones. Memory Usage: 8.1 MB, less than 98.75% of C++ online submissions for
+ * Jewels and Stones.
+ */
 class Solution {
  public:
   int countChar(std::string& str, char& c) {
