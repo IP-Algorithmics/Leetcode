@@ -1,8 +1,4 @@
 /**
- * Runtime: 12 ms, faster than 70.48% of C++ online submissions for Flipping an
- * Image. Memory Usage: 9.2 MB, less than 100.00% of C++ online submissions for
- * Flipping an Image.
- *
  * Given a binary matrix A, we want to flip the image horizontally, then invert
  * it, and return the resulting image. To flip an image horizontally means that
  * each row of the image is reversed. For example, flipping [1, 1, 0]
@@ -33,6 +29,11 @@
 
 using namespace std;
 
+/**
+ * Runtime: 12 ms, faster than 70.48% of C++ online submissions for Flipping an
+ * Image. Memory Usage: 9.2 MB, less than 100.00% of C++ online submissions for
+ * Flipping an Image.
+ */
 class Solution {
  public:
   vector<vector<int>> flipAndInvertImage(vector<vector<int>>& A) {
