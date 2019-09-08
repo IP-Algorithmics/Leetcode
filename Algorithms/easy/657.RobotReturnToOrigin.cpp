@@ -27,6 +27,8 @@ its moves.
 #include <array>
 #include <iostream>
 #include <string>
+#include <unordered_map>
+
 using namespace std;
 
 /**
@@ -98,5 +100,23 @@ class Solution {
       return false;
     }
     return true;
+  }
+};
+
+/**
+ * Runtime: 24 ms, faster than 13.76% of C++ online submissions for Robot Return
+ * to Origin. Memory Usage: 10.1 MB, less than 95.12% of C++ online submissions
+ * for Robot Return to Origin.
+ */
+class Solution {
+ public:
+  bool judgeCircle(string moves) {
+    unordered_map<char, int> mapOfMoves;
+    for (auto& m : moves) {
+      mapOfMoves[m]++;
+    }
+
+    return mapOfMoves['R'] == mapOfMoves['L'] &&
+           mapOfMoves['U'] == mapOfMoves['D'];
   }
 };
