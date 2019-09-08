@@ -1,9 +1,4 @@
 /**
- * Runtime: 0 ms, faster than 100.00% of C++ online submissions for Unique Morse
- * Code Words.
- * Memory Usage: 8.8 MB, less than 100.00% of C++ online submissions
- * for Unique Morse Code Words.
- *
  * International Morse Code defines a standard encoding where each letter is
  * mapped to a series of dots and dashes, as follows: "a" maps to ".-", "b" maps
  * to "-...", "c" maps to "-.-.", and so on. For convenience, the full table for
@@ -41,6 +36,12 @@
 
 using namespace std;
 
+/**
+ * Runtime: 0 ms, faster than 100.00% of C++ online submissions for Unique Morse
+ * Code Words.
+ * Memory Usage: 8.8 MB, less than 100.00% of C++ online submissions
+ * for Unique Morse Code Words.
+ */
 class Solution {
  private:
   array<string, 26> morseCode = {
