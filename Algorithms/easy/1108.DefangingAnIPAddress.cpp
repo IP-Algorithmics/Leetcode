@@ -1,8 +1,4 @@
 /**
- * Runtime: 4 ms, faster than 54.13% of C++ online submissions for Defanging an
- * IP Address. Memory Usage: 8.2 MB, less than 100.00% of C++ online submissions
- * for Defanging an IP Address.
- *
  * Given a valid (IPv4) IP address, return a defanged version of that IP
  * address. A defanged IP address replaces every period "." with "[.]".
  *
@@ -22,6 +18,11 @@
 #include <string>
 using namespace std;
 
+/**
+ * Runtime: 4 ms, faster than 54.13% of C++ online submissions for Defanging an
+ * IP Address. Memory Usage: 8.2 MB, less than 100.00% of C++ online submissions
+ * for Defanging an IP Address.
+ */
 class Solution {
  public:
   void replaceAll(std::string& str, std::string str_find,
