@@ -1,8 +1,4 @@
 /**
- * Runtime: 4 ms, faster than 49.15% of C++ online submissions for ToLowerCase.
- * Memory Usage: 8.1 MB, less than 94.87% of C++ online submissions for
- * ToLowerCase.
- *
  * Implement function ToLowerCase() that has a string parameter str, and returns
  * the same string in lowercase.
  *
@@ -23,6 +19,11 @@
 #include <string>
 using namespace std;
 
+/**
+ * Runtime: 4 ms, faster than 49.15% of C++ online submissions for ToLowerCase.
+ * Memory Usage: 8.1 MB, less than 94.87% of C++ online submissions for
+ * ToLowerCase.
+ */
 class Solution {
  public:
   string toLowerCase(string str) {
