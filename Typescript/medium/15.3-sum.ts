@@ -23,7 +23,7 @@ import { test } from '../helpers/test-functions';
 // O(n^2)
 function threeSum(nums: number[]): number[][] {
     const result: number[][] = [];
-    nums = nums.sort((a, b) => a - b);
+    nums.sort((a, b) => a - b);
     const length = nums.length;
 
     const decreaseKToNextUniqueNumber = (k: number, j: number) => {
