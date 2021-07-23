@@ -14,7 +14,8 @@ import { test } from '../helpers/test-functions';
 
 // Runtime: 80 ms, faster than 96.25% of TypeScript online submissions for 3Sum Closest.
 // Memory Usage: 41 MB, less than 52.50% of TypeScript online submissions for 3Sum Closest.
-//O(n^2)
+// Time Complexity: O(n^2)
+// Space Complexity: O(n)
 function threeSumClosest(nums: number[], target: number): number {
     nums.sort((a, b) => a - b);
     let minDiff = Number.MAX_VALUE;

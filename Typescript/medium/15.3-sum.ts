@@ -20,7 +20,8 @@ import { test } from '../helpers/test-functions';
 
 // Runtime: 148 ms, faster than 84.85% of TypeScript online submissions for 3Sum.
 // Memory Usage: 49.3 MB, less than 80.09% of TypeScript online submissions for 3Sum.
-// O(n^2)
+// Time Complexity: O(n^2)
+// Space Complexity: O(n)
 function threeSum(nums: number[]): number[][] {
     const result: number[][] = [];
     nums.sort((a, b) => a - b);
