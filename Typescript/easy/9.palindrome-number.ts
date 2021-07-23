@@ -50,3 +50,5 @@ test(isPalindrome(-101), false);
 test(isPalindrome(0), true);
 test(isPalindrome(123), false);
 test(isPalindrome(123321), true);
+
+export {};
