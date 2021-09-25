@@ -49,3 +49,22 @@ const enum ConsoleColors {
     BgCyan = '\x1b[46m',
     BgWhite = '\x1b[47m',
 }
+
+// export function isEqual(x: any, y: any, type?:'base'|'map'|'') {
+//     if ((x === undefined && y === undefined) || (x === null && y === null)) return true;
+
+//     if (x instanceof Array) {
+//       return x.length === y.length && x.every((item, index) => isEqual(item, y[index]));
+//     }
+//     if (x instanceof Object) {
+//       if()
+//       // this will check nested object that cannot be serialized
+//       return Object.keys(x).every(key => isEqual(x[key], y[key]));
+//     }
+
+//     if(x instanceof Map && y instanceof Map){
+//       return
+//     }
+
+//     return x === y;
+//   }
