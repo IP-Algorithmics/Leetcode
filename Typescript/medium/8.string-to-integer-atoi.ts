@@ -8,7 +8,6 @@
 // Return the integer as the final result.
 import { test } from '../helpers/test-functions';
 
-
 // Note:
 // Only the space character ' ' is considered a whitespace character.
 // Do not ignore any characters other than the leading whitespace or the rest of the string after the digits.
@@ -82,6 +81,11 @@ import { test } from '../helpers/test-functions';
 // 0 <= s.length <= 200
 // s consists of English letters (lower-case and upper-case), digits (0-9), ' ', '+', '-', and '.'.
 
+// Runtime: 84 ms, faster than 98.05% of TypeScript online submissions for String to Integer (atoi).
+// Memory Usage: 41.5 MB, less than 43.18% of TypeScript online submissions for String to Integer (atoi).
+
+// Time Complexity: O(n)
+// Space Complexity: O(1)
 function myAtoi(s: string): number {
     let result = 0;
     let sign = 1;
