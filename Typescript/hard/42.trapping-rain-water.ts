@@ -24,7 +24,7 @@ import { test } from '../helpers/test-functions';
 
 // Time Complexity: O(n)
 // Space Complexity: O(n)
-function trap(height: number[]): number {
+function trapDynamic(height: number[]): number {
     const len = height.length;
     const highestRight: number[] = new Array(len).fill(0);
     const highestLeft: number[] = new Array(len).fill(0);
@@ -41,6 +41,43 @@ function trap(height: number[]): number {
         depth += Math.max(0, Math.min(highestLeft[i], highestRight[i]) - height[i]);
     }
     return depth;
+}
+
+// We have 2 pivots that we move, one from left to right and one from right to left
+// We keep track of the maximum height of each pivot
+// Depending on which pivot is taller, we will move the shorter one, if the next position of the pivot is smaller then we add the difference in heights
+// If the next position of the pivot is taller, we will reset the pivot to that position
+// Doing this for both of the pivots will ensure that we each time have the maximum amount of water trapped
+
+// Runtime: 84 ms, faster than 82.81% of TypeScript online submissions for Trapping Rain Water.
+// Memory Usage: 41.1 MB, less than 55.79% of TypeScript online submissions for Trapping Rain Water.
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+function trap(height: number[]): number {
+    let left = 0;
+    let right = height.length - 1;
+    let answer = 0;
+    let leftMax = 0;
+    let rightMax = 0;
+
+    while (left < right) {
+        if (height[left] < height[right]) {
+            if (height[left] >= leftMax) {
+                leftMax = height[left];
+            } else {
+                answer += leftMax - height[left];
+            }
+            left++;
+        } else {
+            if (height[right] >= rightMax) {
+                rightMax = height[right];
+            } else {
+                answer += rightMax - height[right];
+            }
+            right--;
+        }
+    }
+    return answer;
 }
 
 test(trap([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]), 6);
