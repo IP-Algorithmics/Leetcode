@@ -2,11 +2,16 @@
 
 # How to use
 
--   Typescript
+-   Typescript (Node)
     -   open a terminal
     -   cd ./Typescript
     -   npm i
     -   npm start <path to problem>
+-   Typescript (Deno)
+    -   Prerequisite
+        -   Adjust imports to end in .ts
+    -   open a terminal
+    -   deno run --no-check <path to problem>
 
 # How to test
 
