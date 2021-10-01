@@ -1,15 +1,15 @@
-export function test(result: any, expected: any) {
+export function test(result: unknown, expected: unknown) {
     const isEqualText = (isEqual(result, expected) ? ['Passed', ConsoleColors.Green] : ['Failed', ConsoleColors.Red]) as [string, ConsoleColors];
     const expectedText = [`Expected:${expected}`, ConsoleColors.Blue] as [string, ConsoleColors];
     const resultText = [`Result:${result}`, ConsoleColors.Cyan] as [string, ConsoleColors];
     colorLog([isEqualText, expectedText, resultText]);
 }
 
-function isEqual(result: any, expected: any) {
-    if (result instanceof Array) {
+function isEqual(result: unknown, expected: unknown) {
+    if (result instanceof Array && expected instanceof Array) {
         return result.length === expected.length && result.every((item, index) => isEqual(item, expected[index]));
     }
-    if (result instanceof Object) {
+    if (result instanceof Object && expected instanceof Object) {
         return Object.keys(result).every((key) => isEqual(result[key], expected[key]));
     }
     return result === expected;
@@ -50,7 +50,7 @@ const enum ConsoleColors {
     BgWhite = '\x1b[47m',
 }
 
-// export function isEqual(x: any, y: any, type?:'base'|'map'|'') {
+// export function isEqual(x: unknown, y: unknown, type?:'base'|'map'|'') {
 //     if ((x === undefined && y === undefined) || (x === null && y === null)) return true;
 
 //     if (x instanceof Array) {
