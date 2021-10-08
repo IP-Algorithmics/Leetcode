@@ -68,6 +68,8 @@ class Trie {
         }
     }
 }
+// another solution would be to insert the word into the trie in lexicographical order and on insert check if the character before the last character is a terminal marker.
+// if it is, then we can add the word into the trie and mark it as the longest word.
 function longestWord(words: string[]): string {
     const dict = new Trie();
     dict.buildDict(words);
