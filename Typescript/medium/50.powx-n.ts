@@ -21,6 +21,11 @@ import { test } from '../helpers/test-functions';
 // -2^31 <= n <= 2^31-1
 // -10^4 <= x^n <= 10^4
 
+// Runtime: 76 ms, faster than 96.06% of TypeScript online submissions for Pow(x, n).
+// Memory Usage: 40.7 MB, less than 32.28% of TypeScript online submissions for Pow(x, n).
+
+// Time Complexity: O(n)
+// Space Complexity: O(n)
 function myPow(x: number, n: number): number {
     if (!n) return 1;
     if (n < 0) return 1 / myPow(x, -n);
